@@ -12,12 +12,12 @@ public class Jogador {
     BigDecimal salario;
 
     public Jogador(Long id, Long idTime, String nome, LocalDate dataNascimento, Integer nivelHabilidade, BigDecimal salario) {
-        this.id = id;
-        this.idTime = idTime;
-        this.nome = nome;
-        this.dataNascimento = dataNascimento;
-        this.nivelHabilidade = nivelHabilidade;
-        this.salario = salario;
+        this.setId(id);
+        this.setIdTime(idTime);
+        this.setNome(nome);
+        this.setDataNascimento(dataNascimento);
+        this.setNivelHabilidade(nivelHabilidade);
+        this.setSalario(salario);
     }
 
     public Long getId() {
@@ -57,6 +57,9 @@ public class Jogador {
     }
 
     public void setNivelHabilidade(Integer nivelHabilidade) {
+        if(nivelHabilidade < 0 || nivelHabilidade > 100) {
+            throw new IllegalArgumentException("O nível de habilidade deve estar entre 0 e 100");
+        }
         this.nivelHabilidade = nivelHabilidade;
     }
 

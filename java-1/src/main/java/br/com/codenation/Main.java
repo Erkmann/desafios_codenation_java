@@ -48,6 +48,12 @@ public class Main {
             System.out.println(e.getMessage());
         }
 
+        try {
+            tests.definirCapitao((long)15);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
         System.out.println(tests.buscarJogadores());
 
     }

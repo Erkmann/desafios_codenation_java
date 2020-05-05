@@ -4,16 +4,16 @@ import java.time.LocalDate;
 
 public class Time {
 
-    private Long id;
+    private Long id, idCapitao;
     private String nome, corUniformePrincipal, corUniformeSecundario;
     private LocalDate dataCriacao;
 
     public Time(Long id, String nome, String corUniformePrincipal, String corUniformeSecundario, LocalDate dataCriacao) {
-        this.id = id;
-        this.nome = nome;
-        this.corUniformePrincipal = corUniformePrincipal;
-        this.corUniformeSecundario = corUniformeSecundario;
-        this.dataCriacao = dataCriacao;
+        this.setId(id);
+        this.setNome(nome);
+        this.setCorUniformePrincipal(corUniformePrincipal);
+        this.setCorUniformeSecundario(corUniformeSecundario);
+        this.setDataCriacao(dataCriacao);
     }
 
     public Long getId() {
@@ -22,6 +22,14 @@ public class Time {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Long getIdCapitao() {
+        return idCapitao;
+    }
+
+    public void setIdCapitao(Long idCapitao) {
+        this.idCapitao = idCapitao;
     }
 
     public String getNome() {
